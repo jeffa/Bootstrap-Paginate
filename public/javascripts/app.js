@@ -1,6 +1,14 @@
-function fetch_results() {
+function fetch_results( curr, per ) {
 
-    _ajaxGET( '/results', '#content' );
+    if (!per) per = 10;
+    if (!curr) curr = 1;
+
+    var url = '/results'
+        + '?per=' + per
+        + '&curr=' + curr
+    ;
+
+    _ajaxGET( url, '#content' );
 }
 
 function _ajaxGET( url, id, err ) {

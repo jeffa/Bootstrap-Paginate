@@ -1,12 +1,14 @@
 <h2>Search Results</h2>
 
+[% INCLUDE pagination.tt %]
+
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <td>Foo</td>
-            <td>Bar</td>
-            <td>Baz</td>
-            <td>Qux</td>
+            <th>Foo</th>
+            <th>Bar</th>
+            <th>Baz</th>
+            <th>Qux</th>
         </tr>
     </thead>
     <tbody>
@@ -21,14 +23,4 @@
     </tbody>
 </table>
 
-<div class="pagination">
-    <ul>
-        <li><a href="#">Prev</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
-</div>
+[% INCLUDE pagination.tt %]
