@@ -7,13 +7,16 @@
 <link rel="stylesheet" href="/css/bootstrap.css" />
 <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
 <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/app.js"></script>
 </head>
 
 
-<body>
+<body onload="javascript: fetch_results()">
+
 <div class="container">
 [% content %]
 </div>
+
 </body>
 
 
