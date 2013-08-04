@@ -1,8 +1,8 @@
 package Bootstrap::Paginate;
 use Dancer ':syntax';
-use Data::Page;
+use Data::SpreadPagination;
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 get '/' => sub {
     my %vars = ();
@@ -21,17 +21,18 @@ get '/results' => sub {
         1 .. 9999
     );
 
-    my $pager = Data::Page->new();
-    $pager->total_entries( scalar @results );
-    $pager->entries_per_page( $per );
-    $pager->current_page( $curr );
+    my $pager = Data::SpreadPagination->new({
+        totalEntries      => scalar @results,
+        entriesPerPage    => $per,
+        currentPage       => $curr,
+        maxPages          => 6,
+    });
 
     template results => {
-        results => [ $pager->splice( \@results ) ],
-        pager   => $pager,
+        results => [ @results[$pager->first - 1 .. $pager->last - 1] ],
         per     => $per,
         curr    => $curr,
-        range   => [ $pager->current_page .. $pager->current_page + 5 ],        
+        pager   => $pager,        
     };
 };
 
