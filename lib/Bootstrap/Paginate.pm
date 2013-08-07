@@ -29,7 +29,7 @@ get '/results' => sub {
     });
 
     template results => {
-        results => [ @results[$pager->first - 1 .. $pager->last - 1] ],
+        results => \@results,
         per     => $per,
         curr    => $curr,
         pager   => $pager,        

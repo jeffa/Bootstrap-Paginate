@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        [% FOREACH row IN results %]
+        [% FOREACH row IN results.slice( pager.first - 1, pager.last ) %]
         <tr>
             <td>[% row.foo %]</td>
             <td>[% row.bar %]</td>
