@@ -17,4 +17,3 @@ Requires
 See Also
 --------
 * [Bootstrap-SearchPaginate](https://github.com/jeffa/Bootstrap-SearchPaginate)
-~
