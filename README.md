@@ -13,3 +13,8 @@ Requires
 * [Dancer](http://search.cpan.org/~yanick/Dancer/)
 * [Template](http://search.cpan.org/~abw/Template-Toolkit/)
 * [Data::SpreadPagination](http://search.cpan.org/~knew/Data-SpreadPagination/)
+
+See Also
+--------
+* [Bootstrap-SearchPaginate](https://github.com/jeffa/Bootstrap-SearchPaginate)
+~
